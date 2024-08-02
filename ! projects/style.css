@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+html {
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.head h1 {
+    margin-bottom: 1rem;
+}
+
+.inputs {
+    width: 17rem;
+    position: relative;
+    background-color: rgb(131, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inputs span {
+    background-color: rgb(231, 231, 231);
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    box-shadow: inset 0 0 10px 3px white;
+}
+
+.inputs input {
+    width: 13rem;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    box-shadow: 0 0 10px 3px white;
+}
+
+.lists {
+    position: relative;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(120, 200, 240);
+    border-radius: 10px;
+    width: 17rem;
+    margin-right: 2.5rem;
+    transition: 200ms ease-in-out;
+    /* box-shadow: inset 0 0 3px rgb(255, 39, 39);
+    border: 1px solid black; */
+}
+
+li:hover {
+    transform: scale(1.05); /* تغییر اندازه با استفاده از مقیاس */
+}
+
+li h3 {
+    flex: 1;
+    margin: 0;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+li span {
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 500ms ease-in-out;
+}
+
+li span:hover {
+    color: red;
+    transform: rotate(360deg);
+}
+
+.completed {
+    color: gray;
+    background-color: rgba(103, 255, 103, 0.421);
+    position: relative;
+    /* box-shadow: none; */
+}
+
+.completed h3 {
+    text-decoration: line-through;
+}
+
+
+.completed::after {
+    content: "Done";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem; 
+    font-weight: bold;
+    color: green;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+}
