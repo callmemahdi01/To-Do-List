@@ -127,13 +127,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Existing code for adding tasks and theme toggle
-
-    // Hide loader after page load
-    window.addEventListener('load', () => {
-        document.body.classList.add('loaded');
-    });
-});

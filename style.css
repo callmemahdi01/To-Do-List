@@ -1,97 +1,8 @@
-.loading {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #222222;
-}
-
-
-/* Loader CSS */
-.lds-ellipsis,
-.lds-ellipsis div {
-    box-sizing: border-box;
-}
-.lds-ellipsis {
-    position: fixed;
-    margin: 50% 40%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-}
-.lds-ellipsis div {
-    position: absolute;
-    top: 33.33333px;
-    width: 13.33333px;
-    height: 13.33333px;
-    border-radius: 50%;
-    background: currentColor;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-.lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-}
-@keyframes lds-ellipsis1 {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-@keyframes lds-ellipsis3 {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-}
-@keyframes lds-ellipsis2 {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(24px, 0);
-    }
-}
-
-body.loaded .lds-ellipsis {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 html {
     background-color: white;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s ease-in-out;
-    background-color: #F9F5F6;
+    background-color: #f9f5f6;
     font-family: vazirmatn;
     display: flex;
     align-items: center;
@@ -113,7 +24,7 @@ h1 {
     position: absolute;
     top: 2%;
     right: 3%;
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
 }
 
 .theme p {
@@ -133,7 +44,7 @@ h1 {
 
 .inputs {
     position: relative;
-    background-color: #FAD4D4;
+    background-color: #fad4d4;
     padding: 5px 5px;
     border-radius: 10px;
 }
@@ -144,10 +55,10 @@ h1 {
     padding: 0.3rem 0.5rem;
     cursor: pointer;
     position: absolute;
-    right: .6rem;
+    right: 0.6rem;
     top: 18%;
     font-weight: 900;
-    color: #EF9F9F;
+    color: #ef9f9f;
 }
 
 .inputs input {
@@ -178,11 +89,11 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 0.1em;
-    background-color: #F2BED1;
+    background-color: #f2bed1;
     border-radius: 10px;
     width: 18rem;
     transition: 200ms ease-in-out;
-    border: 1px solid #EF9F9F;
+    border: 1px solid #ef9f9f;
 }
 
 li:hover {
@@ -202,7 +113,7 @@ li span {
     padding: 0.09rem 0.4rem;
     border-radius: 5px;
     color: white;
-    background-color: #F47C7C;
+    background-color: #f47c7c;
     border-radius: 20%;
     margin-right: 2%;
 }
@@ -213,10 +124,9 @@ li span:hover {
     font-weight: 800;
 }
 
-
 .completed {
     color: #3f3f3f;
-    background-color:#FAD4D4;
+    background-color: #fad4d4;
     position: relative;
     font-size: small;
 }
@@ -240,9 +150,9 @@ li span:hover {
     transform: translate(-50%, -50%);
     font-size: 0.7rem;
     font-weight: bold;
-    color: #EF9F9F;
+    color: #ef9f9f;
     background-color: #57874a;
-    padding: 0.01rem 0.3rem ;
+    padding: 0.01rem 0.3rem;
     border-radius: 5px;
 }
 
@@ -307,7 +217,7 @@ html.dark-mode .completed::after {
     font-weight: bold;
     color: white;
     background-color: #2b651b;
-    padding: 0.01rem 0.3rem ;
+    padding: 0.01rem 0.3rem;
     border-radius: 5px;
 }
 
@@ -376,26 +286,24 @@ input:checked + .slider:before {
     font-size: small;
 }
 
-html.dark-mode .slider:before{
+html.dark-mode .slider:before {
     background-color: gold;
 }
 
-
-.dot {
-    position: absolute;
-    width: 2rem;
-    height: 1rem;
-    top: 0.3rem;
-    right: 5.6rem;
-    font-weight: 900;
-    font-size: large;
-    transition: 500ms cubic-bezier(0.61, 0.05, 0.41, 1.01);
+html.dark-mode .light {
+    display: none;
 }
 
-html.dark-mode .dot{
+.dark {
+    display: none;
+}
+
+html.dark-mode .dark {
+    display: inline;
+}
+
+html.dark-mode .dot {
     position: absolute;
     top: 0.3rem;
     right: 0.2rem;
 }
-
-
