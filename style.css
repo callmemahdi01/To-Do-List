@@ -19,6 +19,7 @@ h1 {
 
 .head h1 {
     margin-bottom: 1rem;
+text-shadow: 3px 7px 7px red;
 }
 
 .inputs {
