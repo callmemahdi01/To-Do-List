@@ -2,7 +2,7 @@ html {
     background-color: white;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s ease-in-out;
-    background-color: #F3EEEA;
+    background-color: #F9F5F6;
     font-family: vazirmatn;
 }
 
@@ -41,7 +41,7 @@ h1 {
 
 .inputs {
     position: relative;
-    background-color: #B0A695;
+    background-color: #FAD4D4;
     padding: 5px 5px;
     border-radius: 10px;
 }
@@ -55,7 +55,7 @@ h1 {
     right: .6rem;
     top: 18%;
     font-weight: 900;
-    color: #B0A695;
+    color: #EF9F9F;
 }
 
 .inputs input {
@@ -85,12 +85,12 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: hsl(38,45%, 88%);
+    padding: 0.1em;
+    background-color: #F2BED1;
     border-radius: 10px;
-    width: 17rem;
+    width: 18rem;
     transition: 200ms ease-in-out;
-    border: 1px solid #B0A695;
+    border: 1px solid #EF9F9F;
 }
 
 li:hover {
@@ -107,12 +107,13 @@ li h3 {
 li span {
     cursor: pointer;
     font-size: 0.8rem;
-    padding: 5px 10px;
+    padding: 0.09rem 0.4rem;
     border-radius: 5px;
     transition: 1s cubic-bezier(0.61, 0.05, 0.41, 1.01);
     color: white;
-    background-color: #B0A695;
+    background-color: #F47C7C;
     border-radius: 20%;
+    margin-right: 2%;
 }
 
 li span:hover {
@@ -123,8 +124,8 @@ li span:hover {
 }
 
 .completed {
-    color: rgb(63, 63, 63);
-    background-color:#B0A695;
+    color: #3f3f3f;
+    background-color:#FAD4D4;
     position: relative;
     font-size: small;
 }
@@ -141,16 +142,16 @@ li span:hover {
 }
 
 .completed::after {
-    content: " ✔ Done";
+    content: " ✔ Done ";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
-    color: white;
-    background-color: #358320;
-    padding: 5px 10px;
+    color: #EF9F9F;
+    background-color: #57874a;
+    padding: 0.01rem 0.3rem ;
     border-radius: 5px;
 }
 
@@ -206,16 +207,16 @@ html.dark-mode .completed span {
 }
 
 html.dark-mode .completed::after {
-    content: " ✔ Done";
+    content: " ✔ Done ";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
     color: white;
     background-color: #2b651b;
-    padding: 5px 10px;
+    padding: 0.01rem 0.3rem ;
     border-radius: 5px;
 }
 
