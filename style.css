@@ -1,17 +1,17 @@
 html {
-    background-color: white;
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s ease-in-out;
-    background-color: #f9f5f6;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #F9F5F6;
     font-family: vazirmatn;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* body {
-    direction: rtl;
-} */
+body {
+    background-color: #F9F5F6;
+    transition: background-color 0.3s, color 0.3s;
+}
 
 h1 {
     margin-top: 2rem;
@@ -24,7 +24,7 @@ h1 {
     position: absolute;
     top: 2%;
     right: 3%;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse
 }
 
 .theme p {
@@ -44,7 +44,7 @@ h1 {
 
 .inputs {
     position: relative;
-    background-color: #fad4d4;
+    background-color: #FAD4D4;
     padding: 5px 5px;
     border-radius: 10px;
 }
@@ -55,18 +55,32 @@ h1 {
     padding: 0.3rem 0.5rem;
     cursor: pointer;
     position: absolute;
-    right: 0.6rem;
+    right: .6rem;
     top: 18%;
     font-weight: 900;
-    color: #ef9f9f;
+    color: #EF9F9F;
 }
 
 .inputs input {
-    width: 13.5rem;
+    width: 17rem;
     border: none;
     border-radius: 10px;
     padding: 0.9rem 2rem;
     background-color: #fcfcfc;
+    unicode-bidi: plaintext;
+    text-align: start;
+}
+
+.input {
+    width: 14rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    background-color: #fcfcfc;
+    font-family: vazirmatn;
+    unicode-bidi: plaintext;
+    text-align: start;
+    
 }
 
 ::placeholder {
@@ -76,7 +90,7 @@ h1 {
 
 .lists {
     position: relative;
-    width: 18.2rem;
+    width: 21.4rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -89,11 +103,12 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 0.1em;
-    background-color: #f2bed1;
+    background-color: #f4a9c4;
     border-radius: 10px;
-    width: 18rem;
-    transition: 200ms ease-in-out;
-    border: 1px solid #ef9f9f;
+    width: 21.2rem;
+    transition: 200ms;
+    border: 1px solid #EF9F9F;
+    font-size: medium;
 }
 
 li:hover {
@@ -107,39 +122,64 @@ li h3 {
     margin-left: 10px;
 }
 
+li .tick {
+    font-size: 0.8rem;
+    padding: 0.09rem 0.4rem;
+}
+
+li .tick:hover {
+    font-size: medium;
+    font-weight: 600;
+}
+
 li span {
     cursor: pointer;
     font-size: 0.8rem;
     padding: 0.09rem 0.4rem;
     border-radius: 5px;
     color: white;
-    background-color: #f47c7c;
+    background-color: #F47C7C;
     border-radius: 20%;
     margin-right: 2%;
+    transition: 300ms;
 }
 
-li span:hover {
-    color: red;
+li span:hover:not(.tick) {
     font-size: large;
     font-weight: 800;
 }
 
+
 .completed {
     color: #3f3f3f;
-    background-color: #fad4d4;
+    background-color:#FAD4D4;
     position: relative;
-    font-size: small;
 }
 
-.completed span {
+li .complete {
+    cursor: pointer;
+    padding: 0.15rem 0.45rem;
+    border-radius: 20%;
+    color: white;
+    margin-right: 3%;
+    transition: 200ms ease-in-out;
+}
+
+li .complete:hover {
+    color: white;
+    font-size: 1rem;
+}
+
+.completed span:not(.fa-pencil) {
     font-size: medium;
     color: white;
     box-shadow: 0 0 5px 0px rgb(127, 0, 0);
-    /* transform: rotate(360deg); */
 }
 
 .completed h3 {
     text-decoration: line-through rgba(255, 0, 0, 0.4) wavy;
+    font-size: 1rem;
+    font-weight: 900;
 }
 
 .completed::after {
@@ -150,9 +190,9 @@ li span:hover {
     transform: translate(-50%, -50%);
     font-size: 0.7rem;
     font-weight: bold;
-    color: #ef9f9f;
+    color: #EF9F9F;
     background-color: #57874a;
-    padding: 0.01rem 0.3rem;
+    padding: 0.01rem 0.3rem ;
     border-radius: 5px;
 }
 
@@ -201,6 +241,7 @@ html.dark-mode li span {
     background-color: #3d3d3d;
 }
 
+
 html.dark-mode .completed span {
     background-color: #3d3d3d;
     position: relative;
@@ -217,7 +258,7 @@ html.dark-mode .completed::after {
     font-weight: bold;
     color: white;
     background-color: #2b651b;
-    padding: 0.01rem 0.3rem;
+    padding: 0.01rem 0.3rem ;
     border-radius: 5px;
 }
 
@@ -286,7 +327,7 @@ input:checked + .slider:before {
     font-size: small;
 }
 
-html.dark-mode .slider:before {
+html.dark-mode .slider:before{
     background-color: gold;
 }
 
@@ -302,7 +343,7 @@ html.dark-mode .dark {
     display: inline;
 }
 
-html.dark-mode .dot {
+html.dark-mode .dot{
     position: absolute;
     top: 0.3rem;
     right: 0.2rem;
