@@ -168,7 +168,7 @@ li span:hover {
     position: relative;
 }
 
-.completed span:not(.fa-pencil, .tick) {
+.completed .fa-trash-o {
     color: white;
     box-shadow: 0 0 5px 1px rgb(127, 0, 0);
 }
