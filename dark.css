@@ -1,0 +1,72 @@
+html.dark-mode {
+    color: #f0f0f0;
+    background-color: #333;
+}
+
+html.dark-mode nav {
+    background-color: #565656;
+}
+
+
+html.dark-mode .inputs {
+    background-color: #222;
+    /* box-shadow: none; */
+}
+
+html.dark-mode .inputs input {
+    background-color: #333;
+    color: aliceblue;
+}
+
+html.dark-mode .inputs span {
+    background-color: #222;
+    color: #12adad;
+}
+
+/* ----------------------------------------------------------- */
+
+html.dark-mode .lists li {
+    background-color: #666;
+    border: 1px inset #009d9d66;
+}
+
+html.dark-mode .completed:not(span) {
+    color: #858585;
+    background-color: #3d3d3d;
+    border: 1px solid #0000004d;
+}
+
+html.dark-mode li span {
+    background-color: #3d3d3d;
+}
+
+html.dark-mode .completed span {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode .completed::after {
+    color: white;
+    background-color: #2b651b;
+}
+
+/* ----------------------------------------------------------- */
+
+html.dark-mode .light {
+    display: none;
+}
+
+html.dark-mode .dark {
+    display: inline-block;
+}
+
+.dark {
+    display: none;
+}
+
+/* -------------------------------------------- */
+
+html.dark-mode .task-details {
+    background-color: #383838;
+    border: 1px solid black;
+    color: rgb(171, 171, 171);
+}

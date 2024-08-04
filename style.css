@@ -1,52 +1,76 @@
+@import url(./style/toggle.css);
+@import url(./style/dark.css);
+/* @import url(./style/s.css); */
+
 html {
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-    background-color: #F9F5F6;
-    font-family: vazirmatn;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: vazirmatn, Arial, sans-serif;
+    transition: background-color 0.3s;
+    background-color: #f9f5f6;
 }
 
 body {
-    background-color: #F9F5F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    margin-top: -1.2rem;
+    /* direction: rtl; */
+}
+
+nav {
+    width: 100%;
+    height: 4rem;
+    background-color: #f4a9c4;
     transition: background-color 0.3s, color 0.3s;
 }
 
-h1 {
-    margin-top: 2rem;
-    font-weight: 800;
-}
-
-.theme {
-    display: flex;
-    align-items: center;
+.theme-toggle {
+    display: inline-block;
     position: absolute;
-    top: 2%;
-    right: 3%;
-    flex-direction: row-reverse
+    top: 0.5rem;
+    right: 5.7rem;
 }
 
-.theme p {
-    margin: 0 10px;
+.mode {
+    display: flex;
+    position: absolute;
+    top: -0.5rem;
+    right: 10px;
+    font-weight: 900;
+}
+
+h1 {
+    font-weight: 900;
 }
 
 .container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 1rem;
-}
-
-.head h1 {
-    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 600px;
 }
 
 .inputs {
-    position: relative;
-    background-color: #FAD4D4;
-    padding: 5px 5px;
+    background-color: #fad4d4;
+    padding: 5px;
+    width: 90%;
+    box-sizing: border-box;
     border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.inputs input {
+    border: none;
+    width: calc(99% - 1.8rem);
+    border-radius: 10px;
+    height: 3rem;
+    padding: 0 1rem;
+    unicode-bidi: plaintext;
+    text-align: start;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .inputs span {
@@ -55,32 +79,10 @@ h1 {
     padding: 0.3rem 0.5rem;
     cursor: pointer;
     position: absolute;
-    right: .6rem;
-    top: 18%;
     font-weight: 900;
-    color: #EF9F9F;
-}
-
-.inputs input {
-    width: 17rem;
-    border: none;
-    border-radius: 10px;
-    padding: 0.9rem 2rem;
-    background-color: #fcfcfc;
-    unicode-bidi: plaintext;
-    text-align: start;
-}
-
-.input {
-    width: 14rem;
-    border: none;
-    border-radius: 10px;
-    padding: 0.4rem 1rem;
-    background-color: #fcfcfc;
-    font-family: vazirmatn;
-    unicode-bidi: plaintext;
-    text-align: start;
-    
+    color: #ef9f9f;
+    margin: 0.45rem -3.3rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 ::placeholder {
@@ -89,26 +91,35 @@ h1 {
 }
 
 .lists {
-    position: relative;
-    width: 21.4rem;
+    padding: 5px;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+ul {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
 }
 
 li {
-    list-style-type: none;
-    margin-bottom: 0.5rem;
+    position: relative;  /* برای استفاده از position: absolute در child elements */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0.1em;
+    width: 95%;
+    margin-bottom: 0.5rem;
     background-color: #f4a9c4;
     border-radius: 10px;
-    width: 21.2rem;
     transition: 200ms;
-    border: 1px solid #EF9F9F;
+    border: 1px solid #ef9f9f;
     font-size: medium;
+    unicode-bidi: plaintext;
+    text-align: start;
+    box-sizing: border-box;
 }
 
 li:hover {
@@ -119,67 +130,53 @@ li h3 {
     flex: 1;
     margin: 0;
     cursor: pointer;
-    margin-left: 10px;
-}
-
-li .tick {
-    font-size: 0.8rem;
-    padding: 0.09rem 0.4rem;
-}
-
-li .tick:hover {
-    font-size: medium;
-    font-weight: 600;
+    margin-left: 0.5rem;
+    padding: 0.45rem;
+    transition: 0.3s;
 }
 
 li span {
     cursor: pointer;
-    font-size: 0.8rem;
-    padding: 0.09rem 0.4rem;
+    padding: 0.4rem;
     border-radius: 5px;
     color: white;
-    background-color: #F47C7C;
+    background-color: #f47c7c;
     border-radius: 20%;
     margin-right: 2%;
     transition: 300ms;
+    height: 1rem;
 }
 
-li span:hover:not(.tick) {
+li span:hover {
     font-size: large;
     font-weight: 800;
 }
 
+.input {
+    border: none;
+    width: calc(99% - 1.8rem);
+    border-radius: 10px;
+    height: 3rem;
+    padding: 0 1rem;
+    unicode-bidi: plaintext;
+    text-align: start;
+}
 
 .completed {
     color: #3f3f3f;
-    background-color:#FAD4D4;
+    background-color: #fad4d4;
     position: relative;
 }
 
-li .complete {
-    cursor: pointer;
-    padding: 0.15rem 0.45rem;
-    border-radius: 20%;
+.completed span:not(.fa-pencil, .tick) {
     color: white;
-    margin-right: 3%;
-    transition: 200ms ease-in-out;
-}
-
-li .complete:hover {
-    color: white;
-    font-size: 1rem;
-}
-
-.completed span:not(.fa-pencil) {
-    font-size: medium;
-    color: white;
-    box-shadow: 0 0 5px 0px rgb(127, 0, 0);
+    box-shadow: 0 0 5px 1px rgb(127, 0, 0);
 }
 
 .completed h3 {
     text-decoration: line-through rgba(255, 0, 0, 0.4) wavy;
-    font-size: 1rem;
-    font-weight: 900;
+    font-size: 0.9em;
+    font-weight: 800;
 }
 
 .completed::after {
@@ -189,162 +186,38 @@ li .complete:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 0.7rem;
-    font-weight: bold;
-    color: #EF9F9F;
-    background-color: #57874a;
-    padding: 0.01rem 0.3rem ;
-    border-radius: 5px;
-}
-
-/* -------  dark mode  ------ */
-
-html.dark-mode {
-    color: #f0f0f0;
-    background-color: #333;
-}
-
-html.dark-mode body {
-    color: #f0f0f0;
-    background-color: #333;
-}
-
-html.dark-mode .inputs {
-    background-color: #222;
-    box-shadow: none;
-}
-
-html.dark-mode .inputs input {
-    background-color: #333;
-    color: aliceblue;
-}
-
-html.dark-mode .inputs span {
-    background-color: #222;
-    color: #12adad;
-}
-
-/* ------------------------------------------------------- */
-
-html.dark-mode .lists li {
-    background-color: #666;
-    border: 1px inset rgba(0, 157, 157, 0.4);
-}
-
-html.dark-mode .completed:not(span) {
-    color: rgb(133, 133, 133);
-    background-color: rgb(61, 61, 61);
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-html.dark-mode li span {
-    background-color: #3d3d3d;
-}
-
-
-html.dark-mode .completed span {
-    background-color: #3d3d3d;
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-html.dark-mode .completed::after {
-    content: " ✔ Done ";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.7rem;
-    font-weight: bold;
-    color: white;
-    background-color: #2b651b;
-    padding: 0.01rem 0.3rem ;
-    border-radius: 5px;
-}
-
-/* ---------------------------------------- */
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border: 1px solid rgba(138, 138, 138, 0.248);
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 20px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-
-input:checked + .slider {
-    background-color: #009d9d;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    transform: translateX(20px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-.theme p {
     font-weight: 900;
-    font-size: small;
+    color: #ef9f9f;
+    background-color: #57874a;
+    padding: 0.01rem 0.3rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
+/* ======================================== */
 
-html.dark-mode .slider:before{
-    background-color: gold;
-}
 
-html.dark-mode .light {
-    display: none;
-}
-
-.dark {
-    display: none;
-}
-
-html.dark-mode .dark {
-    display: inline;
-}
-
-html.dark-mode .dot{
+.task-details {
+    border-radius: 10px;
     position: absolute;
-    top: 0.3rem;
-    right: 0.2rem;
+    top: 100%; /* نمایش اطلاعات در زیر لیست */
+    left: 0;
+    width: 90%; /* پهنای کامل لیست */
+    display: none; /* پنهان کردن به صورت پیش‌فرض */
+    font-size: 0.8em;
+    color: #888;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    height: 1rem;
+    margin: 0.5rem 2.5%;
+
+}
+
+.task-details p {
+    margin: 0;
+}
+
+/* فاصله اضافی برای نمایش اطلاعات */
+.expanded {
+    margin-bottom: 3.5rem; /* مقدار مناسب برای فضای اضافی مورد نیاز */
 }

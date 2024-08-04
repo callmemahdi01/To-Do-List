@@ -1,0 +1,366 @@
+html {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #F9F5F6;
+    font-family: vazirmatn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.25rem;
+}
+
+body {
+    background-color: #F9F5F6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.theme {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    flex-direction: row-reverse; 
+}
+
+.theme p {
+    margin: 0 5px;
+}
+
+
+h1 {
+    margin-top: 2rem;
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.head h1 {
+    margin-bottom: 1rem;
+}
+
+.inputs {
+    position: relative;
+    background-color: #FAD4D4;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+
+.inputs span {
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: .6rem;
+    top: 18%;
+    font-weight: 900;
+    color: #EF9F9F;
+}
+
+.inputs input {
+    width: 17rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.9rem 0.9rem;
+    background-color: #fcfcfc;
+    unicode-bidi: plaintext;
+    text-align: start;
+    padding-right: 3.5rem;
+}
+
+.input {
+    width: 14rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    background-color: #fcfcfc;
+    font-family: vazirmatn;
+    unicode-bidi: plaintext;
+    text-align: start;
+    
+}
+
+::placeholder {
+    font-weight: 600;
+    color: #dcdcdc;
+}
+
+.lists {
+    position: relative;
+    width: 21.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+li {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em;
+    background-color: #f4a9c4;
+    border-radius: 10px;
+    width: 21.2rem;
+    transition: 200ms;
+    border: 1px solid #EF9F9F;
+    font-size: medium;
+    unicode-bidi: plaintext;
+    text-align: start;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+li h3 {
+    flex: 1;
+    margin: 0;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+li .tick {
+    font-size: 0.8rem;
+    padding: 0.09rem 0.4rem;
+}
+
+li .tick:hover {
+    font-size: medium;
+    font-weight: 600;
+}
+
+li span {
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0.09rem 0.4rem;
+    border-radius: 5px;
+    color: white;
+    background-color: #F47C7C;
+    border-radius: 20%;
+    margin-right: 2%;
+    transition: 300ms;
+}
+
+li span:hover:not(.tick) {
+    font-size: large;
+    font-weight: 800;
+}
+
+
+.completed {
+    color: #3f3f3f;
+    background-color:#FAD4D4;
+    position: relative;
+}
+
+li .complete {
+    cursor: pointer;
+    padding: 0.15rem 0.45rem;
+    border-radius: 20%;
+    color: white;
+    margin-right: 3%;
+    transition: 200ms ease-in-out;
+}
+
+li .complete:hover {
+    color: white;
+    font-size: 1rem;
+}
+
+.completed span:not(.fa-pencil) {
+    font-size: medium;
+    color: white;
+    box-shadow: 0 0 5px 0px rgb(127, 0, 0);
+}
+
+.completed h3 {
+    text-decoration: line-through rgba(255, 0, 0, 0.4) wavy;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.completed::after {
+    content: " ✔ Done ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #EF9F9F;
+    background-color: #57874a;
+    padding: 0.01rem 0.3rem ;
+    border-radius: 5px;
+}
+
+/* -------  dark mode  ------ */
+
+html.dark-mode {
+    color: #f0f0f0;
+    background-color: #333;
+}
+
+html.dark-mode body {
+    color: #f0f0f0;
+    background-color: #333;
+}
+
+html.dark-mode nav {
+    background-color: #565656;
+}
+
+html.dark-mode .inputs {
+    background-color: #222;
+    box-shadow: none;
+}
+
+html.dark-mode .inputs input {
+    background-color: #333;
+    color: aliceblue;
+}
+
+html.dark-mode .inputs span {
+    background-color: #222;
+    color: #12adad;
+}
+
+/* ------------------------------------------------------- */
+
+html.dark-mode .lists li {
+    background-color: #666;
+    border: 1px inset rgba(0, 157, 157, 0.4);
+}
+
+html.dark-mode .completed:not(span) {
+    color: rgb(133, 133, 133);
+    background-color: rgb(61, 61, 61);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode li span {
+    background-color: #3d3d3d;
+}
+
+
+html.dark-mode .completed span {
+    background-color: #3d3d3d;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode .completed::after {
+    content: " ✔ Done ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    background-color: #2b651b;
+    padding: 0.01rem 0.3rem ;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------- */
+
+.switch {
+    position: relative;
+    display: flex;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border: 1px solid rgba(138, 138, 138, 0.248);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 20px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #009d9d;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme p {
+    font-weight: 900;
+    font-size: small;
+}
+
+html.dark-mode .slider:before{
+    background-color: gold;
+}
+
+html.dark-mode .light {
+    display: none;
+}
+
+.dark {
+    display: none;
+}
+
+html.dark-mode .dark {
+    display: inline;
+}
+
+
+
+@media (min-width: 768px) {
+    nav {
+        width: 21.5rem;
+    }
+}
+
+    

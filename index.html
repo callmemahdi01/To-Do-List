@@ -9,28 +9,30 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <link rel="manifest" href="./manifest.json" />
         <link
             href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
             rel="stylesheet"
             type="text/css"
         />
+        <link rel="icon" href="./img/icon-192x192.png" />
+        <link rel="manifest" href="./manifest.json" />
     </head>
     <body>
-        <div class="container">
-            <div class="theme">
-                <p class="dark">Dark mode</p>
-                <p class="light">Light mode</p>
-                <label class="switch">
-                    <input
-                        type="checkbox"
-                        id="themeToggle"
-                        class="themeoggle"
-                    />
-                    <span class="slider round"></span>
-                </label>
+        <nav>
+            <div class="mode">
+                <p class="dark">dark mode</p>
+                <p class="light">light mode</p>
             </div>
 
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" />
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </nav>
+
+        <div class="container">
             <div class="head">
                 <h1>To-Do List</h1>
             </div>
