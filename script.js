@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const li = document.createElement("li");
         if (completed) li.classList.add("completed");
 
-        const task = document.createElement("h3");
+        const task = document.createElement("h4");
         task.textContent = text;
         task.addEventListener("click", () => {
             li.classList.toggle("completed");

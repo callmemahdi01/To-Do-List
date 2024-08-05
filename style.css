@@ -107,7 +107,7 @@ ul {
 }
 
 li {
-    position: relative;  /* برای استفاده از position: absolute در child elements */
+    position: relative; /* برای استفاده از position: absolute در child elements */
     display: flex;
     align-items: center;
     width: 95%;
@@ -126,7 +126,7 @@ li:hover {
     transform: scale(1.05);
 }
 
-li h3 {
+li h4 {
     flex: 1;
     margin: 0;
     cursor: pointer;
@@ -173,7 +173,7 @@ li span:hover {
     box-shadow: 0 0 5px 1px rgb(127, 0, 0);
 }
 
-.completed h3 {
+.completed h4 {
     text-decoration: line-through rgba(255, 0, 0, 0.4) wavy;
     font-size: 0.9em;
     font-weight: 800;
@@ -195,7 +195,6 @@ li span:hover {
 }
 /* ======================================== */
 
-
 .task-details {
     border-radius: 10px;
     position: absolute;
@@ -210,7 +209,6 @@ li span:hover {
     border: 1px solid #ddd;
     height: 1rem;
     margin: 0.5rem 2.5%;
-
 }
 
 .task-details p {
