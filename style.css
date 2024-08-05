@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
     margin: 0;
     margin-top: -1.2rem;
     /* direction: rtl; */
@@ -26,11 +25,15 @@ nav {
     transition: background-color 0.3s, color 0.3s;
 }
 
+label {
+    margin-top: 1rem;
+}
+
 .theme-toggle {
     display: inline-block;
     position: absolute;
-    top: 0.5rem;
-    right: 5.7rem;
+    margin-top: 0.75rem;
+    right: 5.8rem;
 }
 
 .mode {
@@ -64,13 +67,14 @@ h1 {
 
 .inputs input {
     border: none;
-    width: calc(99% - 1.8rem);
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 8px;
     height: 3rem;
     padding: 0 1rem;
     unicode-bidi: plaintext;
     text-align: start;
     transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
 }
 
 .inputs span {
