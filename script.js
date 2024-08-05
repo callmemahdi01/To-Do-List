@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function saveToLocalStorage() {
         const todos = Array.from(todoList.children).map((li) => ({
-            text: li.querySelector("h3").textContent,
+            text: li.querySelector("h4").textContent,
             completed: li.classList.contains("completed"),
             date: li.querySelector(".task-date").textContent
         }));
