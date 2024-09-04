@@ -92,6 +92,7 @@ h1 {
     unicode-bidi: plaintext;
     text-align: start;
     transition: background-color 0.3s, color 0.3s;
+    outline: none;
 }
 
 .inputs span {
